@@ -39,7 +39,7 @@ public class LoginActivity extends Activity {
 		if(mSharedpre == null) {
 			mSharedpre = getSharedPreferences("userData", Context.MODE_PRIVATE);
 		}
-		if(mSharedpre.getBoolean("checked", false)) {
+		if(mSharedpre!=null && mSharedpre.getBoolean("checked", false)) {
 			et_login_account.setText(mSharedpre.getString("account", ""));
 			et_login_password.setText(mSharedpre.getString("password", ""));
 			cb_remember.setChecked(true);
